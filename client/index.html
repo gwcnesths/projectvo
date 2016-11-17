@@ -28,7 +28,7 @@
           $scope.$apply();
         });
 
-        socket.on('roster', function (names) {
+        socket.on('roster ', function (names) {
           $scope.roster = names;
           $scope.$apply();
         });
