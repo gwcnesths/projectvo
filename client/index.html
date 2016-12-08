@@ -22,6 +22,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-messages.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-resource.js"></script>
 
+    <!-- Angular Material Library -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
     <!-- SocketJS Library -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="lib/angular-socket-io/socket.min.js"></script>
@@ -35,7 +39,64 @@
       ng-cloak
       ng-controller="homeCtrl as homeCtrl">
     
+    
+    
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ homeCtrl.title }}</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp">
+        </div>
+      </div>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">View</a>
+        <a class="mdl-navigation__link" href="">Add</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">View</a>
+        <a class="mdl-navigation__link" href="">Add</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here --></div>
+  </main>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <h1>{{ homeCtrl.title }}</h1>
+    
+    <div style='border:1px solid' ng-repeat="d in homeCtrl.data">
+        <h3>{{ d.title }}</h3>
+        <a href="">d.link</a>
+    </div>
     
     <!-- Raised button with ripple -->
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
