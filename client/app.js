@@ -2,7 +2,8 @@
 angular.module('app', [
     'ui.router',
     'app.services',
-    'app.controllers'
+    'app.controllers',
+    'ngMaterial'
 ])
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider',
         function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
