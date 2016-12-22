@@ -3,6 +3,7 @@
  */
 
 var homeCtrl = function($scope, $mdDialog, $http, $stateParams, API ){
+
     var vm;
     vm = this;
     vm.title = 'Volunteering Opportunities';
@@ -22,6 +23,20 @@ var homeCtrl = function($scope, $mdDialog, $http, $stateParams, API ){
             $scope.status = 'You cancelled the dialog.';
         });
     };
+
+    vm.data = [];
+    
+    vm.data.push( { title: 'Volunteering Op 1',
+                 link: 'htttp:www.site1.com'
+            });
+    
+    vm.data.push( { title: 'Volunteering Op 2',
+                 link: 'htttp:www.site2.com'
+            });
+    
+    console.log(vm.data)
+    console.log('controller');
+    
 }
 
 angular.module('app.controllers', [
