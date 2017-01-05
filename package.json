@@ -1,5 +1,5 @@
 {
-  "name": "Nest GWC Volunteering Opportunities",
+  "name": "Nest-GWC-Volunteering-Opportunities",
   "version": "0.0.0",
   "description": "A volunteering information site built with Angular and Express",
   "main": "server.js",
