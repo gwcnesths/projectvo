@@ -8,6 +8,7 @@
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.15.2",
+    "cloudant": "^1.6.2",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
     "dotenv": "^2.0.0",

@@ -7,15 +7,9 @@ angular.module('app.services', [
 ])
 // angular.module('app')
     .factory('API', ['$resource', function ($resource) {
-
         console.log('resources');
-
-        var TokenResource = $resource('/api/token/:token');
-        var ListResource = $resource('/api/list/:wishlistid');
-        var UserListResource = $resource('/api/list/:wishlistid/:clientid', { wishlistid: '@wishlistid', clientid: '@clientid'});
+        var Volunteer = $resource('/api/volunteer/:id');
         return {
-            Token: TokenResource,
-            List: ListResource,
-            UserList: UserListResource
+            Volunteer: Volunteer
         };
     }]);
